@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://icartonn.github.io/rich/ -->
+<html lang="ru"><script data-timezone-ext-el="[&quot;Europe/Stockholm&quot;,-120,-180,&quot;Stockholm Daylight Time&quot;]" src="chrome-extension://cejckpjfigehbeecbbfhangbknpidcnh/data/inject-content.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./Rich Client _ Лучший бесплатный клиент_files/logo.png">
+    <title>Rich Client | Лучший бесплатный клиент</title>
+    <link href="./Rich Client _ Лучший бесплатный клиент_files/css2" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --surface: #121212;
+            --primary: #ffffff;
+            --primary-glow: rgba(255, 255, 255, 0.1);
+            --text: #ffffff;
+            --text-muted: #888888;
+            --border: #222222;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header / Hero */
+        header {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        /* Фоновое свечение */
+        header::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: var(--primary);
+            filter: blur(200px);
+            opacity: 0.05;
+            z-index: -1;
+            border-radius: 50%;
+        }
+
+        .logo {
+            /* Убрали жесткие размеры, чтобы логотип был 1:1 */
+            max-width: 100%;
+            margin-bottom: 1.5rem;
+            image-rendering: pixelated; /* Делает пиксель-арт четким без "мыла" */
+            filter: drop-shadow(0 0 15px var(--primary-glow));
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p.subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 3rem;
+        }
+
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        /* Главная кнопка скачивания */
+        .btn-primary {
+            background: var(--primary);
+            color: var(--bg);
+            box-shadow: 0 4px 15px var(--primary-glow);
+        }
+
+        .btn-primary:hover {
+            background: #e0e0e0;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Второстепенные кнопки (API и Дискорд) */
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            background: var(--surface);
+            transform: translateY(-3px);
+        }
+
+        /* Features Section */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--text-muted);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+        }
+
+        /* Installation Guide */
+        .install-guide {
+            background: var(--surface);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .step {
+            display: flex;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+        }
+
+        .step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-num {
+            background: var(--primary);
+            color: var(--bg);
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-right: 1.5rem;
+        }
+
+        .step-content h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .step-content p {
+            color: var(--text-muted);
+        }
+
+        code {
+            background: var(--bg);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            color: var(--primary);
+            border: 1px solid var(--border);
+            font-family: monospace;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .btn-group { flex-direction: column; width: 100%; }
+            .btn { text-align: center; width: 100%; }
+            .install-guide { padding: 1.5rem; }
+            header { padding-top: 4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="./Rich Client _ Лучший бесплатный клиент_files/logo.png" alt="Rich Client Logo" class="logo">
+        <h1>Rich Client</h1>
+        <p class="subtitle">Бесплатный чит-клиент на Fabric. Ставь свои моды, настраивай под себя и доминируй.</p>
+        
+        <div class="btn-group">
+            <a href="https://github.com/icartonn/rich/releases/download/client_mod_latest/output.jar" class="btn btn-primary">Скачать Клиент</a>
+            <a href="https://cdn.modrinth.com/data/P7dR8mSH/versions/5zJNhXV2/fabric-api-0.141.4%2B1.21.11.jar?mr_download_reason=standalone&amp;mr_game_version=1.21.11&amp;mr_loader=fabric" class="btn btn-secondary">Скачать Fabric API</a>
+            <a href="https://discord.gg/TerhH5mT2f" class="btn btn-secondary" target="_blank">Наш Discord</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>Почему именно Rich?</h2>
+        <div class="features">
+            <div class="feature-card">
+                <h3>Полная кастомизация</h3>
+                <p>Rich Client сделан как обычный мод на Fabric. Это значит, что ты можешь спокойно закидывать в папку любые свои любимые моды (на миникарту, оптимизацию, макросы) и они будут работать вместе с клиентом без конфликтов.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Абсолютно бесплатно</h3>
+                <p>Никаких скрытых подписок или премиум-функций. Ты получаешь фулл доступ ко всем фичам клиента сразу после скачивания. И так будет всегда.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Легкая установка</h3>
+                <p>Забудь про сложные инсталляторы и замену версий игры. Просто кинь два <code>.jar</code> файла в папку с модами и запускай игру. Справится даже ребенок.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="install">
+        <h2>Как установить?</h2>
+        <div class="install-guide">
+            <div class="step">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <h4>Установи Fabric</h4>
+                    <p>Для начала тебе нужен загрузчик. Скачай и установи Fabric Installer для версии Minecraft 1.21.11 (или той, на которой играешь).</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <h4>Скачай файлы</h4>
+                    <p>Скачай сам <b>Rich Client</b> и <b>Fabric API</b> по кнопкам в самом верху страницы.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                    <h4>Открой папку модов</h4>
+                    <p>Нажми комбинацию клавиш <code>Win + R</code>, введи туда <code>%appdata%\.minecraft\mods</code> и нажми Enter.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">4</div>
+                <div class="step-content">
+                    <h4>Закинь моды</h4>
+                    <p>Просто перетащи скачанные файлы <code>output.jar</code> (клиент) и <code>fabric-api-...jar</code> в эту папку. Если хочешь добавить свои моды — кидай их туда же.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">5</div>
+                <div class="step-content">
+                    <h4>Запускай</h4>
+                    <p>Открывай лаунчер, выбирай профиль <b>Fabric</b> и заходи в игру. Всё готово!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Rich Client.</p>
+    </footer>
+
+
+
+</body></html>
