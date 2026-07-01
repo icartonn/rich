@@ -1,3 +1,2 @@
 https://api.adoptium.net/v3/binary/latest/21/ga/windows/x64/jre/hotspot/normal/eclipse?project=jdk|runtime\jre|HASH_HERE
 https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.2/fabric-installer-1.0.2.jar|fabric-installer.jar|HASH_HERE
-https://raw.githubusercontent.com/icartonn/rich/refs/heads/main/Rich/config.cfg|Rich\config.cfg|HASH_HERE
