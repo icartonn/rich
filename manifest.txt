@@ -1,3 +1,4 @@
 https://github.com/icartonn/rich/releases/download/jdk/OpenJDK21U-jre_x64_windows_hotspot_21.0.11_10.zip|jre.zip|jdk-21.0.11+10-jre
 https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.2/fabric-installer-1.0.2.jar|fabric-installer.jar|dd523f641fd5361d388f8e8e0d4c43018b00ba285423db31e201e991d46b471c
 https://github.com/icartonn/rich/releases/download/client_mod_latest/output.jar|mods/rich.jar|5d1297367470bed020b7a0cda6f85bfa8cfe0ae9e38901cbb0826885ff22252e
+https://github.com/icartonn/rich/releases/download/fabric_api/fabric-api-0.141.4+1.21.11.jar|mods/fabric_api.jar|9286762874fd20d1d45e006d175fea8ff762da54e00946bbe952c4f61077159a
