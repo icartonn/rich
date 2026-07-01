@@ -1,2 +1,2 @@
-https://api.adoptium.net/v3/binary/21.0.11+10/ga/windows/x64/jre/hotspot/normal/eclipse?project=jdk|jre.zip|jdk-21.0.11+10-jre
+https://github.com/icartonn/rich/releases/download/jdk/OpenJDK21U-jre_x64_windows_hotspot_21.0.11_10.zip|jre.zip|jdk-21.0.11+10-jre
 https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.2/fabric-installer-1.0.2.jar|fabric-installer.jar|dd523f641fd5361d388f8e8e0d4c43018b00ba285423db31e201e991d46b471c
